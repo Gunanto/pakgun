@@ -1632,3 +1632,21 @@
             const startIndex = (currentPage - 1) * studentsPerPage;
             const endIndex = startIndex + studentsPerPage;
             const studentsToShow = filteredStudents.slice(startIndex<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'979b0b958325fe14',t:'MTc1Njk2MzMwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+<script>
+function showPage(pageId) {
+    // Sembunyikan semua konten
+    document.querySelectorAll('.page-content').forEach(el => {
+        el.classList.add('hidden');
+    });
+
+    // Tampilkan konten sesuai id
+    document.getElementById(pageId).classList.remove('hidden');
+
+    // Update status aktif di sidebar
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('bg-blue-100', 'dark:bg-gray-700');
+    });
+    event.currentTarget.classList.add('bg-blue-100', 'dark:bg-gray-700');
+}
+</script>
